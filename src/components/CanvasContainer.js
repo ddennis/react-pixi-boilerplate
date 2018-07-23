@@ -35,9 +35,11 @@ export default class CanvasContainer extends Component {
 
 		this.loader = new PIXI.loaders.Loader();
 		const urlPrefix = '../canvas_assets/';
+
 		for (var item in CONSTANTS.assets) {
-			const url = urlPrefix + item;
-			this.loader.add(item, url)
+			const url = urlPrefix + CONSTANTS.assets[item];
+			console.log (" CanvasContainer.js > url = " , CONSTANTS.assets[item]);
+			this.loader.add(CONSTANTS.assets[item] , url)
 		}
 
 
@@ -51,6 +53,7 @@ export default class CanvasContainer extends Component {
 // WHEN ASSETS HAS LOADED
 //---------------------------------------------------------------------------------------
 	assetsLoadComplete(loader, resoureArr){
+		console.log (" CanvasContainer.js > loaded = " );
 		this.startApp()
 	}
 

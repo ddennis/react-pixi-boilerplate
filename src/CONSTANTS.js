@@ -50,7 +50,8 @@ export const getTxt = ( label = "test", size = 26, color = 'black',  _style ) =>
 
 
 export const assets = {
-	spinnerring:"spinnerring.png"
+	spinnerring:"spinnerring.png",
+	profileImageBack:"profileImageBack.png"
 };
 
 
